@@ -15,7 +15,7 @@ function Search(props) {
 
 	const onChange = (event) => {
 		console.log(event.target.value);
-		props.onSearch(event.target.value, (event.target.value === true))
+		props.onSearch(event.target.value)
 	}
 	return (
 		<div className="search-bar flex center">
