@@ -1,0 +1,25 @@
+// Setup
+@import "setup/variables";
+@import "setup/functions";
+@import "setup/mixins";
+
+// Basics
+@import "basics/typography";
+@import "basics/base";
+@import "basics/helpers";
+@import "basics/layout";
+@import "basics/modals";
+@import "basics/animations";
+
+// Cmps
+@import 'cmps/dogs-list';
+@import 'cmps/loading';
+@import 'cmps/header';
+@import 'cmps/slick';
+@import 'cmps/main-navbar';
+@import 'cmps/main-footer';
+@import 'cmps/dog-intro';
+@import 'cmps/search';
+
+// Pages
+@import 'pages/dogs';

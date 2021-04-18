@@ -1,0 +1,36 @@
+header {
+	height: 83vh;
+	justify-content: space-around;
+	align-items: center;
+	.text-container {
+		width: 50%;
+		h1 {
+			font-size: 7.5rem;
+			font-family: spartan-bold;
+			color: $clr1;
+			-webkit-text-stroke: 2px $clr2;
+			text-transform: uppercase;
+		}
+		button {
+			margin: 1rem 0 0 10px;
+			svg {
+				margin-left: 1rem;
+			}
+			transition: all .5s ease-in-out;
+			&:hover {
+				transform: scale3d(1.03, 1.03, 1.03);
+			}
+		}
+	}
+	.animation-container {
+		.animation-circle {
+			background-color: #eb5e6f2a;
+			width: rem(530px);
+			height: rem(530px);
+			border-radius: 50%;
+			svg {
+				transform: translate3d(-10px, -10px, 6px) !important;
+			}
+		}
+	}
+}

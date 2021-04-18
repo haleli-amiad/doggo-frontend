@@ -1,0 +1,24 @@
+.dogs-page {
+	.list-wrapper {
+		width: 77%;
+	}
+	.dog-filter {
+		margin-bottom: 2rem;
+        .MuiCheckbox-colorSecondary.Mui-checked, .MuiRadio-colorSecondary.Mui-checked {
+            color: $clr3;
+        }
+			h2 {
+				text-align: center;
+				color: $clr3;
+				font-size: 1rem;
+			}
+			p {
+				font-size: .8rem;
+				display: inline-block;
+				width: 14ch;
+				&:hover {
+					text-decoration: underline;
+				}
+		}
+	}
+}

@@ -1,0 +1,18 @@
+.search-bar{
+	width: 100%;
+	border-bottom: 1px solid $clr3;
+	.wrapper {
+		padding-bottom: .6rem;
+		// border-radius: 10px;
+		.MuiIconButton-root:hover {
+			background-color: $clr3;
+		}
+	}
+	input {
+		font-family: spartan;
+		color: black;
+		::placeholder {
+			color: $clr3;
+		}
+	}
+}

@@ -1,0 +1,66 @@
+.dog-intro-container {
+	.info-line {
+		margin-top: 7rem;
+		margin-bottom: 7rem;
+		justify-content: space-between;
+		svg {
+			margin-bottom: .6rem;
+		}
+		p {
+			text-transform: capitalize;
+		}
+	}
+	.dog-intro-main {
+		margin-top: 4rem;
+		.text-container {
+			width: 45%;
+			h1 {
+				margin-bottom: 1rem;
+				font-size: 2.4rem;
+				font-family: spartan-semibold;
+			}
+			h2 {
+				line-height: 1.8;
+				font-size: 1rem;
+				color: $clr3;
+			}
+			.cta-text {
+				margin-top: 8rem;
+				font-size: 1.4rem;
+				font-family: spartan-semibold;
+			}
+			button {
+				svg {
+					margin-right: 1rem;
+				}
+				transition: all .5s ease-in-out;
+				&:hover {
+					transform: scale3d(1.03, 1.03, 1.03);
+				}
+				color: $clr2;
+				border-color: $clr2;
+				padding: .7rem 4rem;
+			}
+		}
+		.image-container {
+			width: 50%;
+			background-color: #fb7c3d34;
+			height: 460px;
+			position: relative;
+			border-radius: 20% 70% 70% 30% / 30% 30% 70% 70%;
+			bottom: -30px;
+			img {
+				width: 90%;
+				z-index: 3;
+				position: absolute;
+				right: -4%;
+				height: 460px;
+				object-fit: cover;
+				-webkit-box-shadow: 0px 0px 21px 3px #7777772a;
+				box-shadow: 0px 0px 21px 3px #7777772a;
+				top: -10%;
+				border-radius: 20% 70% 70% 30% / 30% 30% 70% 70%;
+			}
+		}
+	}
+}

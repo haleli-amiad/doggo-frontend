@@ -1,0 +1,37 @@
+.dog-preview {
+	font-size: .7rem;
+	height: 340px;
+	border: 1px solid transparent;
+	transition: all .3s ease;
+	&:hover {
+		border-color: $clr3;
+		color: $clr3;
+	}
+	img {
+		padding: .8rem;
+		width: 100%;
+		height: 220px;
+		object-fit: cover;
+	}
+	.options-container {
+		padding: .8rem;
+		svg {
+			margin-bottom: 3px;
+		}
+		.info-line:first-of-type {
+			margin-top: 10px;
+		}
+		.info-line {
+			display: flex;
+			align-items: center;
+		}
+		p {
+			display: inline-block;
+			margin-left: 1rem;
+		}
+		.dog-gender {
+			text-transform: capitalize;
+		}
+	}
+}
+
