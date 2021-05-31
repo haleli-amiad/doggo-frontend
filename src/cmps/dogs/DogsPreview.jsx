@@ -18,12 +18,10 @@ function DogsPreview({ dog }) {
 				<img src={dog.url} alt="" />
 
 				<div className="options-container flex col">
-					{dog.breeds[0] && (
-						<span className="info-line">
-							<PetsOutlinedIcon />
-							<p className="dog-title">{dog.breeds[0].name}</p>
-						</span>
-					)}
+					<span className="info-line">
+						<PetsOutlinedIcon />
+						<p className="dog-title">{dog.breed_name}</p>
+					</span>
 					<span className="info-line">
 						<CakeOutlinedIcon />
 						<p>{dog.age} years old</p>

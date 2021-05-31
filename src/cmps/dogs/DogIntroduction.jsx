@@ -27,7 +27,7 @@ function DogIntroduction({ dog }) {
 				const ctaTexts = [
 					"I can't wait to meet you! woof",
 					"We're gonna be best friends!",
-					"I feel like it's fate!",
+					"It feels like fate!",
 					'Come get me, please!',
 					'I already love you.',
 					'This is going to be a love story!'
@@ -47,26 +47,19 @@ function DogIntroduction({ dog }) {
 						{greeting}, I'm {dog.name}!
 					</h1>
 					<h2>I'm {dog.age} years old and I'm gonna swipe you off your feet!</h2>
-					{dog.breeds[0] && (
-						<span>
-							<h2>
-								{dog.breeds[0].bred_for && (
-									<span> I'm specially good at {dog.breeds[0].bred_for},</span>
-								)}
-								{dog.breeds[0].breed_group && (
-									<span>
-										{' '}
-										I'm from the {dog.breeds[0].breed_group}
-										breed group,
-									</span>
-								)}
-								{dog.breeds[0].life_span && (
-									<span> My breed's average life is {dog.breeds[0].life_span}. </span>
-								)}
-							</h2>
-							{dog.breeds[0].temperament && <h2>My temperament is {dog.breeds[0].temperament}! </h2>}
-						</span>
-					)}
+					<span>
+						<h2>
+							{dog.bred_for && <span> I'm specially good at {dog.bred_for},</span>}
+							{dog.breed_group && (
+								<span>
+									I'm from the {dog.breed_group}
+									breed group,
+								</span>
+							)}
+							{dog.life_span && <span> My breed's average life is {dog.life_span}. </span>}
+						</h2>
+						{dog.temperament && <h2>My temperament is {dog.temperament}! </h2>}
+					</span>
 					<h2 className="cta-text">{ctaText}</h2>
 					<button>
 						<ScheduleIcon />Book a meeting with {dog.name}
@@ -82,10 +75,10 @@ function DogIntroduction({ dog }) {
 					{dog.gender === 'male' && <Icon path={mdiGenderMale} size={1} />}
 					<p>{dog.gender}</p>
 				</span>
-				{dog.breeds[0] && (
+				{dog.breed_name && (
 					<span className="flex col center wrap">
 						<PetsOutlinedIcon />
-						<p className="dog-title">{dog.breeds[0].name}</p>
+						<p className="dog-title">{dog.breed_name}</p>
 					</span>
 				)}
 				<span className="flex col center wrap">

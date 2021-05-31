@@ -13,12 +13,17 @@ header {
 		}
 		button {
 			margin: 1rem 0 0 10px;
+			height: 50px;
 			svg {
-				margin-left: 1rem;
+				margin-left: .5rem;
+				height: 80%;
+				padding-top: 3px;
+				transition:  opacity .3s ease-in-out;
 			}
 			transition: all .5s ease-in-out;
 			&:hover {
-				transform: scale3d(1.03, 1.03, 1.03);
+				border-color: $clr4;
+				color: $clr4;
 			}
 		}
 	}

@@ -1,7 +1,7 @@
 
 const INITIAL_STATE = {
     dogs: [],
-    appointments: []
+    appointments: [],
 }
 
 export function dogReducer(state = INITIAL_STATE, action) {
