@@ -7,6 +7,7 @@ const INITIAL_STATE = {
 export function dogReducer(state = INITIAL_STATE, action) {
     switch (action.type) {
         case 'SET_DOGS':
+            console.log('arrived reducer',);
             return {
                 ...state,
                 dogs: action.dogs

@@ -12,6 +12,7 @@ async function query(q = '') {
     console.log('arrived');
     if (localStorage.getItem(DB_KEY)) {
         const dogsDB = JSON.parse(localStorage.getItem(DB_KEY));
+        console.log('localstorage', dogsDB)
         return dogsDB
     } else {
         try {
@@ -19,6 +20,7 @@ async function query(q = '') {
         } catch (err) {
             console.log(err);
         } finally {
+            console.log('got from server', dogsDB)
             localStorage.setItem(DB_KEY, JSON.stringify(dogsDB));
             return dogsDB;
         }

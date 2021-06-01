@@ -1,9 +1,28 @@
 import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 import Routes from '../Routes.js';
+import { useState, useEffect } from 'react';
+import { connect } from 'react-redux';
 import MainNavbar from '../cmps/layout/MainNavbar';
+import { getDogs } from '../store/Dogs/dogsActions';
 import MainFooter from '../cmps/layout/MainFooter';
 
-function App() {
+function _App(props) {
+	const [ dogs, setDogs ] = useState(null);
+	useEffect(() => {
+		const loadDogs = async () => {
+			await props.getDogs();
+		};
+		loadDogs();
+	}, []);
+
+	useEffect(
+		() => {
+			if (!dogs && props.dogs.length) {
+				setDogs(props.dogs);
+			}
+		},
+		[ dogs, props ]
+	);
 	return (
 		<Router>
 			<div className="main-layout">
@@ -19,4 +38,16 @@ function App() {
 	);
 }
 
-export default App;
+const mapStateToProps = (state) => {
+	return {
+		dogs: state.dogReducer.dogs
+	};
+};
+
+const mapDispatchToProps = {
+	getDogs
+};
+
+export const App = connect(mapStateToProps, mapDispatchToProps)(_App);
+
+// export default App;
